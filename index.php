@@ -20,7 +20,7 @@
       @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap");
 
       body {
-        background-color: #eaedf4;
+        background-color: pink;
         font-family: "Rubik", sans-serif;
       }
 
