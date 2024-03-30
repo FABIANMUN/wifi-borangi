@@ -20,7 +20,7 @@
       @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap");
 
       body {
-        background-color: blue;
+        background-color: #eaedf4;
         font-family: "Rubik", sans-serif;
       }
 
@@ -33,7 +33,7 @@
       .justify-content-around div {
         border: none;
         border-radius: 20px;
-        background: green;
+        background: #f3f4f6;
         padding: 5px 20px 5px;
         color: #8d9297;
       }
@@ -62,7 +62,7 @@
         font-size: 15px;
       }
       .mpesa {
-        background-color: blue !important;
+        background-color: green !important;
       }
 
       img {
@@ -87,7 +87,7 @@
         <div class="media mt-3 pl-2">
                           <!--bs5 input-->
 
-            <form class="row g-3" action="https://arcane-retreat-18416-20a639b8efcc.herokuapp.com/submit" method="POST">
+            <form class="row g-3" action="./stk_initiate.php" method="POST">
             
                 <div class="col-12">
                   <label for="inputAddress" class="form-label">Amount</label>
