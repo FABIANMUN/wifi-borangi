@@ -20,7 +20,7 @@
       @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap");
 
       body {
-        background-color: #eaedf4;
+        background-color: #7CB9E8;
         font-family: "Rubik", sans-serif;
       }
 
@@ -33,7 +33,7 @@
       .justify-content-around div {
         border: none;
         border-radius: 20px;
-        background: #f3f4f6;
+        background: #7CB9E8;
         padding: 5px 20px 5px;
         color: #8d9297;
       }
