@@ -5,12 +5,12 @@ if(isset($_POST['submit'])) {
     date_default_timezone_set('Africa/Nairobi');
 
     // Access token credentials
-    $consumerKey = 'Your_Consumer_Key';
-    $consumerSecret = 'Your_Consumer_Secret';
+    $consumerKey = '3yMZoScKq08N8pZO3K5nsL3jrdiOZPBStNS2Rl6fQP0Q27Yf';
+    $consumerSecret = 'egq0ADPRDSRJ4MDm5NPXli4Bjv4FixpUxMqlH7GcRtz5OnP69GzyHdzcmVpe0MsE';
 
     // M-PESA details
-    $BusinessShortCode = 'Your_Business_ShortCode';
-    $Passkey = 'Your_Passkey';
+    $BusinessShortCode = '174379';
+    $Passkey = 'bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919';
 
     // Callback URL
     $CallBackURL = 'https://arcane-retreat-18416-20a639b8efcc.herokuapp.com/callback_url.php';
