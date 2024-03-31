@@ -70,3 +70,117 @@ if(isset($_POST['submit'])) {
     echo 'Form not submitted.';
 }
 ?>
+
+
+
+
+<!-- new code -->
+<?php
+// Include the HTML content and styles from index.html
+include('index.html');
+
+// Define plans (replace with your actual plan data)
+$plans = [
+    [
+        "name" => "Starter",
+        "price" => 10,
+        "duration" => 2, // Hours
+        "data" => 4000,  // MB
+    ],
+    [
+        "name" => "Standard",
+        "price" => 20,
+        "duration" => 4,  // Hours
+        "data" => 1500,  // MB
+    ],
+    // ... Add more plans here ...
+];
+
+// Function to convert duration to human-readable format
+function getDurationText($duration) {
+    $hours = $duration;
+    $days = floor($hours / 24);
+    $remainingHours = $hours % 24;
+
+    if ($hours < 24) {
+        return "$hours hour" . ($hours !== 1 ? 's' : '');
+    } else if ($days > 0 && $remainingHours > 0) {
+        return "$days day" . ($days !== 1 ? 's' : '') . " $remainingHours hour" . ($remainingHours !== 1 ? 's' : '');
+    } else if ($days > 0) {
+        return "$days day" . ($days !== 1 ? 's' : '');
+    } else {
+        return "$remainingHours hour" . ($remainingHours !== 1 ? 's' : '');
+    }
+}
+
+// Handle form submission (assuming you have a form with these elements)
+if (isset($_POST['name']) && isset($_POST['phone']) && isset($_POST['plan_selected'])) {
+    $selectedPlanIndex = $_POST['plan_selected'];
+    $selectedPlan = $plans[$selectedPlanIndex];
+
+    // Simulate M-Pesa payment success (replace with your actual payment processing)
+    $paymentSuccess = true;
+
+    if ($paymentSuccess) {
+        // Process user subscription based on selected plan (replace with your logic)
+        echo "<script>alert('Payment of KSh {$selectedPlan['price']} for the {$selectedPlan['name']} plan successful!')</script>";
+    } else {
+        echo "<script>alert('Payment failed. Please try again.')</script>";
+    }
+}
+?>
+
+<header>
+    </header>
+
+<section id="hero">
+    </section>
+
+<section id="plans">
+    <h2>SUBSCRIBE TO A PLAN</h2>
+    <div class="plan-cards">
+        </div>
+</section>
+
+<footer>
+    </footer>
+
+<script>
+const planCardsContainer = document.querySelector('.plan-cards');
+const selectButtons = document.querySelectorAll('.plan-select-button');
+
+function renderPlans() {
+    plans.forEach((plan, index) => {
+        const planCard = document.createElement('div');
+        planCard.classList.add('plan-card');
+
+        const durationText = getDurationText(plan.duration);
+
+        planCard.innerHTML = `
+            <h3>${plan.name}</h3>
+            <p>Price: KSh ${plan.price}</p>
+            <p>Duration: ${durationText}</p>
+            <p>Data: <span class="math-inline">\{plan\.data\} MB</p\>
+<button class\="plan\-select\-button" data\-index\="</span>{index}">Select</button>
+        `;
+        planCardsContainer.appendChild(planCard);
+    });
+
+    selectButtons.forEach(button => {
+        button.addEventListener('click', handlePlanSelection);
+    });
+}
+
+function handlePlanSelection(event) {
+    // Update form with selected plan information (replace with your form selectors)
+    const selectedPlanIndex = event.target.dataset.index;
+    const selectedPlan = plans[selectedPlanIndex];
+    document.getElementById('plan_name').value = selectedPlan.name;
+    document.getElementById('plan_price').value = selectedPlan.price;
+}
+
+renderPlans();
+
+// Add your existing JavaScript code for video control, etc. (if applicable)
+</script>
+
