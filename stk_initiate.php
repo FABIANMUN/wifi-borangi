@@ -2,7 +2,7 @@
 // Check if form is submitted
 if(isset($_POST['submit'])) {
     // Set timezone
-    date_default_timezone_set('Africa/Nairobi');
+    // date_default_timezone_set('Africa/Nairobi');
 
     // Access token credentials
     $consumerKey = '3yMZoScKq08N8pZO3K5nsL3jrdiOZPBStNS2Rl6fQP0Q27Yf';
@@ -39,7 +39,7 @@ if(isset($_POST['submit'])) {
 
     // Initiate transaction
     $initiate_url = 'https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest';
-    $stkheader = ['Content-Type:application/json','Authorization:Bearer '.$access_token];
+    $stkheader = ['Content-Type: application/json','Authorization:Bearer '.$access_token];
     $curl = curl_init();
     curl_setopt($curl, CURLOPT_URL, $initiate_url);
     curl_setopt($curl, CURLOPT_HTTPHEADER, $stkheader);
