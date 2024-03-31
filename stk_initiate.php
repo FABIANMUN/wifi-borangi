@@ -2,6 +2,7 @@
 // Check if form is submitted
 if(isset($_POST['submit'])) {
     // Set timezone
+
     // date_default_timezone_set('Africa/Nairobi');
 
     // Access token credentials
@@ -53,8 +54,8 @@ if(isset($_POST['submit'])) {
         'PartyB' => $BusinessShortCode,
         'PhoneNumber' => $PartyA,
         'CallBackURL' => $CallBackURL,
-        'AccountReference' => 'Your_Account_Reference',
-        'TransactionDesc' => 'Test Payment'
+        'AccountReference' => 'Borangi Wifi',
+        'TransactionDesc' => 'wifi Payment'
     );
     $data_string = json_encode($curl_post_data);
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
