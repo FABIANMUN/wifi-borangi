@@ -5,19 +5,17 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>prowl</title>
+  <title>Lipa na mpesa</title>
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" />
   <link href="" rel="stylesheet" />
   <!-- CSS only -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" ">
-    <script
-      type=" text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-  </script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap");
 
     body {
-      background-color: #7CB9E8;
+      back ground-color: #7CB9E8;
       font-family: "Rubik", sans-serif;
     }
 
@@ -40,7 +38,7 @@
     }
 
     .justify-content-around div:hover {
-      background: #545ebd;
+      background: #7CB9E8;
       color: #fff;
       cursor: pointer;
     }
@@ -78,7 +76,7 @@
         <div><span>Card</span></div>
       </div>
       <div class="media mt-4 pl-2">
-        <img src="./images/1200px-M-PESA_LOGO-01.svg.png" class="mr-3" height="75" />
+        <img src="./images/wifi-router.png" class="mr-3" height="75" />
         <div class="media-body">
           <h6 class="mt-1">Enter Amount & Number</h6>
         </div>
